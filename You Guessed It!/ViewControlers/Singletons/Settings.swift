@@ -14,5 +14,4 @@ class Settings {
     var numberOfGuesses: Int = 5
     var minRange: Int = 1
     var maxRange: Int = 100
-    
 }

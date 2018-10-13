@@ -51,6 +51,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5108BEE21719EE000D86B0D /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				E54DCC1C216CFD0700284F61 /* ViewController.swift */,
+				E54DCC35216E3BB600284F61 /* PlayViewController.swift */,
+				E54DCC37216E3E7B00284F61 /* SettingsViewController.swift */,
+				E54DCC3B216E44CD00284F61 /* CustomDifficultyViewController.swift */,
+				E5108BEF21719F1A00D86B0D /* Singletons */,
+			);
+			path = ViewControlers;
+			sourceTree = "<group>";
+		};
+		E5108BEF21719F1A00D86B0D /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				E5108BEA2170E10A00D86B0D /* Settings.swift */,
+				E5108BEC2170E83E00D86B0D /* UserDefaults.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		E5108BF021719F5700D86B0D /* CustomObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E54DCC2E216D211B00284F61 /* RoundedButton.swift */,
+				E5108BE8216F85DF00D86B0D /* Colors.swift */,
+			);
+			path = CustomObjects;
+			sourceTree = "<group>";
+		};
 		E54DCC0E216CFD0700284F61 = {
 			isa = PBXGroup;
 			children = (
@@ -72,18 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				E54DCC1A216CFD0700284F61 /* AppDelegate.swift */,
-				E54DCC1C216CFD0700284F61 /* ViewController.swift */,
-				E54DCC35216E3BB600284F61 /* PlayViewController.swift */,
-				E54DCC37216E3E7B00284F61 /* SettingsViewController.swift */,
-				E54DCC3B216E44CD00284F61 /* CustomDifficultyViewController.swift */,
-				E5108BEA2170E10A00D86B0D /* Settings.swift */,
-				E5108BEC2170E83E00D86B0D /* UserDefaults.swift */,
+				E5108BF021719F5700D86B0D /* CustomObjects */,
+				E5108BEE21719EE000D86B0D /* ViewControlers */,
 				E54DCC1E216CFD0700284F61 /* Main.storyboard */,
 				E54DCC21216CFD0800284F61 /* Assets.xcassets */,
 				E54DCC23216CFD0800284F61 /* LaunchScreen.storyboard */,
 				E54DCC26216CFD0800284F61 /* Info.plist */,
-				E54DCC2E216D211B00284F61 /* RoundedButton.swift */,
-				E5108BE8216F85DF00D86B0D /* Colors.swift */,
 			);
 			path = "You Guessed It!";
 			sourceTree = "<group>";

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Tanner York. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 
@@ -21,7 +21,7 @@ class SavedData {
     init() {
         self.numberOfTimesPlayed = UserDefaults.standard.integer(forKey: "numberOfTimesPlayed")
         self.numberOfWins = UserDefaults.standard.integer(forKey: "numberOfWins")
-        self.numberOfLosses = UserDefaults.standard.integer(forKey: "numberOFLosses")
+        self.numberOfLosses = UserDefaults.standard.integer(forKey: "numberOfLosses")
     }
     
     func SaveData() {

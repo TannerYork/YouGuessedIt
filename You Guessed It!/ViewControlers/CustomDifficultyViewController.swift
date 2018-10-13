@@ -8,8 +8,10 @@
 
 import UIKit
 
-class CustomDifficultyViewController: UIViewController {
 
+
+class CustomDifficultyViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,7 +69,8 @@ class CustomDifficultyViewController: UIViewController {
         Settings.sharedInstance.minRange = customMinRange
         Settings.sharedInstance.maxRange = customMaxRange
         Settings.sharedInstance.numberOfGuesses = customNumOfGuess
-        
+        self.present(SettingsView, animated: true, completion: nil)
+
         
     }
 }

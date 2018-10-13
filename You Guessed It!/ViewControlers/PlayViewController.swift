@@ -66,17 +66,18 @@ class PlayViewController: UIViewController {
             userGuessTextFeild.isEnabled = false
             SavedData.sharedInstance.numberOfLosses = SavedData.sharedInstance.numberOfLosses + 1
             SavedData.sharedInstance.numberOfTimesPlayed = SavedData.sharedInstance.numberOfTimesPlayed + 1
-            return
         }
         numberOfGuesses.text = "\(guessesRemaining) guesses remaining"
         timesPlayed.text = "Total times played: \(SavedData.sharedInstance.numberOfTimesPlayed)"
         timesWon.text = "Total times won: \(SavedData.sharedInstance.numberOfWins)"
         timesLost.text = "Total times lost: \(SavedData.sharedInstance.numberOfLosses)"
+        SavedData.sharedInstance.SaveData()
     }
     
     
     @IBAction func playGainButton(_ sender: Any) {
         restart()
+        SavedData.sharedInstance.SaveData()
     }
     
     
@@ -100,14 +101,14 @@ class PlayViewController: UIViewController {
             }
             if guess > randomNumber {
                 if toLow.textColor == UIColor.red {
-                    toLow.textColor = darkBlue
+                    toLow.textColor = ExtraUIColors().darkBlue
                 }
                 toHigh.textColor = UIColor.red
                 guessesRemaining = guessesRemaining - 1
             }
             if guess < randomNumber {
                 if toHigh.textColor == UIColor.red {
-                    toHigh.textColor = darkBlue
+                    toHigh.textColor = ExtraUIColors().darkBlue
                 }
                 toLow.textColor = UIColor.red
                 guessesRemaining = guessesRemaining - 1
@@ -118,11 +119,11 @@ class PlayViewController: UIViewController {
             // new random number
             randomNumber = Int.random(in: minimum...maximum)
             // reset guesses remaining
-            guessesRemaining = 5
+            guessesRemaining = Settings.sharedInstance.numberOfGuesses
             // clear text field
             userGuessTextFeild.text = ""
-            toHigh.textColor = darkBlue
-            toLow.textColor = darkBlue
+            toHigh.textColor = ExtraUIColors().darkBlue
+            toLow.textColor = ExtraUIColors().darkBlue
             // enable text field
             userGuessTextFeild.isEnabled = true
             // hide play again button
