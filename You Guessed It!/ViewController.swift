@@ -8,13 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        SavedData.sharedInstance.SaveData()
     }
-
+    
+    
+    
+    //MARK: Properties
+    @IBOutlet weak var playButton: RoundedButton!
+    @IBOutlet weak var settingsButton: RoundedButton!
+    
+    
+    
+    
+    //MARK: Actions
+    
+    
+    
 
 }
 

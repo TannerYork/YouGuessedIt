@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5108BE9216F85DF00D86B0D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5108BE8216F85DF00D86B0D /* Colors.swift */; };
+		E5108BEB2170E10B00D86B0D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5108BEA2170E10A00D86B0D /* Settings.swift */; };
+		E5108BED2170E83E00D86B0D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5108BEC2170E83E00D86B0D /* UserDefaults.swift */; };
 		E54DCC1B216CFD0700284F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DCC1A216CFD0700284F61 /* AppDelegate.swift */; };
 		E54DCC1D216CFD0700284F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DCC1C216CFD0700284F61 /* ViewController.swift */; };
 		E54DCC20216CFD0700284F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54DCC1E216CFD0700284F61 /* Main.storyboard */; };
 		E54DCC22216CFD0800284F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54DCC21216CFD0800284F61 /* Assets.xcassets */; };
 		E54DCC25216CFD0800284F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54DCC23216CFD0800284F61 /* LaunchScreen.storyboard */; };
+		E54DCC2F216D211B00284F61 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DCC2E216D211B00284F61 /* RoundedButton.swift */; };
+		E54DCC32216E2F5900284F61 /* Delicious.otf in Resources */ = {isa = PBXBuildFile; fileRef = E54DCC31216E2F5900284F61 /* Delicious.otf */; };
+		E54DCC36216E3BB600284F61 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DCC35216E3BB600284F61 /* PlayViewController.swift */; };
+		E54DCC38216E3E7B00284F61 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DCC37216E3E7B00284F61 /* SettingsViewController.swift */; };
+		E54DCC3C216E44CD00284F61 /* CustomDifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DCC3B216E44CD00284F61 /* CustomDifficultyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5108BE8216F85DF00D86B0D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E5108BEA2170E10A00D86B0D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E5108BEC2170E83E00D86B0D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E54DCC17216CFD0700284F61 /* You Guessed It!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "You Guessed It!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DCC1A216CFD0700284F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DCC1C216CFD0700284F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,11 @@
 		E54DCC21216CFD0800284F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54DCC24216CFD0800284F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E54DCC26216CFD0800284F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E54DCC2E216D211B00284F61 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E54DCC31216E2F5900284F61 /* Delicious.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Delicious.otf; path = "../../../../../Downloads/darrell-flood_delicious/Delicious.otf"; sourceTree = "<group>"; };
+		E54DCC35216E3BB600284F61 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		E54DCC37216E3E7B00284F61 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E54DCC3B216E44CD00284F61 /* CustomDifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDifficultyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,7 @@
 		E54DCC0E216CFD0700284F61 = {
 			isa = PBXGroup;
 			children = (
+				E54DCC30216E2F0900284F61 /* Resources */,
 				E54DCC19216CFD0700284F61 /* You Guessed It! */,
 				E54DCC18216CFD0700284F61 /* Products */,
 			);
@@ -56,12 +73,27 @@
 			children = (
 				E54DCC1A216CFD0700284F61 /* AppDelegate.swift */,
 				E54DCC1C216CFD0700284F61 /* ViewController.swift */,
+				E54DCC35216E3BB600284F61 /* PlayViewController.swift */,
+				E54DCC37216E3E7B00284F61 /* SettingsViewController.swift */,
+				E54DCC3B216E44CD00284F61 /* CustomDifficultyViewController.swift */,
+				E5108BEA2170E10A00D86B0D /* Settings.swift */,
+				E5108BEC2170E83E00D86B0D /* UserDefaults.swift */,
 				E54DCC1E216CFD0700284F61 /* Main.storyboard */,
 				E54DCC21216CFD0800284F61 /* Assets.xcassets */,
 				E54DCC23216CFD0800284F61 /* LaunchScreen.storyboard */,
 				E54DCC26216CFD0800284F61 /* Info.plist */,
+				E54DCC2E216D211B00284F61 /* RoundedButton.swift */,
+				E5108BE8216F85DF00D86B0D /* Colors.swift */,
 			);
 			path = "You Guessed It!";
+			sourceTree = "<group>";
+		};
+		E54DCC30216E2F0900284F61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E54DCC31216E2F5900284F61 /* Delicious.otf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54DCC25216CFD0800284F61 /* LaunchScreen.storyboard in Resources */,
+				E54DCC32216E2F5900284F61 /* Delicious.otf in Resources */,
 				E54DCC22216CFD0800284F61 /* Assets.xcassets in Resources */,
 				E54DCC20216CFD0700284F61 /* Main.storyboard in Resources */,
 			);
@@ -136,6 +169,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54DCC1D216CFD0700284F61 /* ViewController.swift in Sources */,
+				E5108BE9216F85DF00D86B0D /* Colors.swift in Sources */,
+				E5108BEB2170E10B00D86B0D /* Settings.swift in Sources */,
+				E54DCC2F216D211B00284F61 /* RoundedButton.swift in Sources */,
+				E54DCC36216E3BB600284F61 /* PlayViewController.swift in Sources */,
+				E5108BED2170E83E00D86B0D /* UserDefaults.swift in Sources */,
+				E54DCC3C216E44CD00284F61 /* CustomDifficultyViewController.swift in Sources */,
+				E54DCC38216E3E7B00284F61 /* SettingsViewController.swift in Sources */,
 				E54DCC1B216CFD0700284F61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
