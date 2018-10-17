@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ExtraUIColors {
-    let darkBlue: UIColor = UIColor(red:0.22, green:0.25, blue:0.32, alpha:1.0)
-    let selectedButton: UIColor = UIColor(red:0.22, green:0.31, blue:0.32, alpha:1.0)
-
+extension UIColor {
+    static let darkBlue = UIColor(red:0.22, green:0.25, blue:0.32, alpha:1.0)
+    static let selectedButton: UIColor = UIColor(red:0.22, green:0.31, blue:0.32, alpha:1.0)
+    static let charcoal: UIColor = UIColor(red:0.67, green:0.62, blue:0.62, alpha:1.0)
 }

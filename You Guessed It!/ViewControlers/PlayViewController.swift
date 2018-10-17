@@ -9,7 +9,11 @@
 import UIKit
 
 class PlayViewController: UIViewController {
-
+    var timesUserPlayed: Int = 0
+    var wins: Int = 0
+    var losses: Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -60,12 +64,7 @@ class PlayViewController: UIViewController {
         }
         makeAGuess(userGuess)
         if guessesRemaining <= 0 {
-            userInputResponder.text = "You Loose"
-            enterGuessButton.isHidden = true
-            playAgianButton.isHidden = false
-            userGuessTextFeild.isEnabled = false
-            SavedData.sharedInstance.numberOfLosses = SavedData.sharedInstance.numberOfLosses + 1
-            SavedData.sharedInstance.numberOfTimesPlayed = SavedData.sharedInstance.numberOfTimesPlayed + 1
+           lose()
         }
         numberOfGuesses.text = "\(guessesRemaining) guesses remaining"
         timesPlayed.text = "Total times played: \(SavedData.sharedInstance.numberOfTimesPlayed)"
@@ -91,24 +90,19 @@ class PlayViewController: UIViewController {
             
             
             if guess == randomNumber {
-                userInputResponder.text = "YOU WIN"
-                enterGuessButton.isHidden = true
-                playAgianButton.isHidden = false
-                userGuessTextFeild.isEnabled = false
-                SavedData.sharedInstance.numberOfWins = SavedData.sharedInstance.numberOfWins + 1
-                SavedData.sharedInstance.numberOfTimesPlayed = SavedData.sharedInstance.numberOfTimesPlayed + 1
+                win()
                 return
             }
             if guess > randomNumber {
                 if toLow.textColor == UIColor.red {
-                    toLow.textColor = ExtraUIColors().darkBlue
+                    toLow.textColor = .darkBlue
                 }
                 toHigh.textColor = UIColor.red
                 guessesRemaining = guessesRemaining - 1
             }
             if guess < randomNumber {
                 if toHigh.textColor == UIColor.red {
-                    toHigh.textColor = ExtraUIColors().darkBlue
+                    toHigh.textColor = .darkBlue
                 }
                 toLow.textColor = UIColor.red
                 guessesRemaining = guessesRemaining - 1
@@ -122,8 +116,8 @@ class PlayViewController: UIViewController {
             guessesRemaining = Settings.sharedInstance.numberOfGuesses
             // clear text field
             userGuessTextFeild.text = ""
-            toHigh.textColor = ExtraUIColors().darkBlue
-            toLow.textColor = ExtraUIColors().darkBlue
+            toHigh.textColor = .darkBlue
+            toLow.textColor = .darkBlue
             // enable text field
             userGuessTextFeild.isEnabled = true
             // hide play again button
@@ -140,4 +134,23 @@ class PlayViewController: UIViewController {
             timesWon.text = "Total times won: \(SavedData.sharedInstance.numberOfWins)"
             timesLost.text = "Total times lost: \(SavedData.sharedInstance.numberOfLosses)"
         }
+    
+    
+    func win() {
+        userInputResponder.text = "YOU WIN"
+        enterGuessButton.isHidden = true
+        playAgianButton.isHidden = false
+        userGuessTextFeild.isEnabled = false
+        SavedData.sharedInstance.numberOfWins = SavedData.sharedInstance.numberOfWins + 1
+        SavedData.sharedInstance.numberOfTimesPlayed = SavedData.sharedInstance.numberOfTimesPlayed + 1
+    }
+    
+    func lose() {
+        userInputResponder.text = "You Loose"
+        enterGuessButton.isHidden = true
+        playAgianButton.isHidden = false
+        userGuessTextFeild.isEnabled = false
+        SavedData.sharedInstance.numberOfLosses = SavedData.sharedInstance.numberOfLosses + 1
+        SavedData.sharedInstance.numberOfTimesPlayed = SavedData.sharedInstance.numberOfTimesPlayed + 1
+    }
 }

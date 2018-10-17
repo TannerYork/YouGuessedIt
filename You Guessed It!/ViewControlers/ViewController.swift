@@ -8,14 +8,13 @@
 
 import UIKit
 let MainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-let SettingsView  = MainStoryBoard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        SavedData.sharedInstance.SaveData()
     }
     
     

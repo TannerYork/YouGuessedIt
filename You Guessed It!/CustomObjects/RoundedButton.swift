@@ -9,6 +9,7 @@
 import UIKit
 
 class RoundedButton: UIButton {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,5 +22,6 @@ class RoundedButton: UIButton {
         layer.cornerRadius = frame.height/2
         layer.borderColor = tintColor.cgColor
     }
+    
 
 }

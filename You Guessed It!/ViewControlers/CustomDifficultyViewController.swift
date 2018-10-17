@@ -69,8 +69,7 @@ class CustomDifficultyViewController: UIViewController {
         Settings.sharedInstance.minRange = customMinRange
         Settings.sharedInstance.maxRange = customMaxRange
         Settings.sharedInstance.numberOfGuesses = customNumOfGuess
-        self.present(SettingsView, animated: true, completion: nil)
+        rangeWarrningText.text = "Cutsom difficulty set"
 
-        
     }
 }

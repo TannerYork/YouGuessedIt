@@ -7,6 +7,8 @@
 //
 
 import UIKit
+let backgroundColor = Settings.sharedInstance.backgroundColor
+let newTextColor = Settings.sharedInstance.buttonsColor
 
 class Settings {
     static let sharedInstance = Settings()
@@ -14,4 +16,7 @@ class Settings {
     var numberOfGuesses: Int = 5
     var minRange: Int = 1
     var maxRange: Int = 100
+    var backgroundColor: UIColor = .charcoal
+    var buttonsColor: UIColor = .darkBlue
+    var buttonTextColor: UIColor = UIColor.white
 }
